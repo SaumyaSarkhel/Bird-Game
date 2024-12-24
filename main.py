@@ -118,9 +118,10 @@ def main():
 
         else:
             # Game over screen
-            font = pygame.font.Font(None, 48)
-            game_over_text = font.render('Game Over! Press R to Restart', True, BLACK)
-            screen.blit(game_over_text, (SCREEN_WIDTH // 2 - 200, SCREEN_HEIGHT // 2))
+            font = pygame.font.Font(None, 72)
+            game_over_text = font.render('Game Over! Press R to Restart', True, (255, 255, 0))
+            text_rect = game_over_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
+            screen.blit(game_over_text, text_rect)
 
         pygame.display.flip()
         clock.tick(30)
